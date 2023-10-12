@@ -1,0 +1,3 @@
+# ignore the modules and the distribution folder
+node_modules/
+dist/

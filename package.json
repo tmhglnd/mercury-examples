@@ -1,0 +1,32 @@
+{
+  "name": "mercury-examples",
+  "version": "1.0.0",
+  "description": "Package with examples and tutorials for the Mercury language",
+  "main": "dist/dist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "data" : "node build.js",
+    "dist" : "browserify index.js -o dist/dist.js",
+    "build": "npm run data && npm run dist"
+  },
+  "keywords": [
+    "mercury",
+    "live",
+    "coding",
+    "creative",
+    "coding",
+    "algorithmic",
+    "composition",
+    "electronic",
+    "music",
+    "audiovisual"
+  ],
+  "author": "Timo Hoogland",
+  "license": "ISC",
+  "devDependencies": {
+    "brfs": "^2.0.2",
+    "browserify": "^17.0.0",
+    "fast-glob": "^3.3.1",
+    "fs-extra": "^11.1.1"
+  }
+}

@@ -22,7 +22,7 @@ $ npm install mercury-examples
 
 ```js
 const Examples = require('mercury-examples').Examples;
-const Tutorials = require('mercury.examples').Tutorials;
+const Tutorials = require('mercury-examples').Tutorials;
 ```
 
 ## 📝 Contribute

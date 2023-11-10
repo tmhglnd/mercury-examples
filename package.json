@@ -2,12 +2,13 @@
   "name": "mercury-examples",
   "version": "1.0.0",
   "description": "Package with examples and tutorials for the Mercury language",
-  "main": "dist/dist.js",
+  "main": "./dist/mercury-examples.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
     "data": "node build.js",
-    "dist": "browserify index.js | uglifyjs > dist/dist.js",
-    "build": "npm run data && npm run dist"
+    "dist": "mkdir dist && browserify -t brfs index.js | uglifyjs > dist/mercury-examples.js",
+    "build": "npm run clean && npm run data && npm run dist"
   },
   "keywords": [
     "mercury",

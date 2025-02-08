@@ -1,4 +1,4 @@
-// === TUTORIAL 20: Volume ===
+// === TUTORIAL 120: Volume ===
 // Sometimes you want some sounds to sound louder or softer 
 // than others. For this we can use the gain() method. 
 // A gain of 0 is off, a gain of 1 is the original volume 

@@ -1,4 +1,4 @@
-// === TUTORIAL 710 ===
+// === TUTORIAL 710: OSC Messages ===
 // It is possible to send Open Sound Control (OSC) Messages to Mercury 
 // instruments. However this is only possible when running Mercury via a 
 // localhost. Go to https://github.com/tmhglnd/mercury-playground#-install 

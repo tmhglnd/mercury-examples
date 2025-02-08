@@ -13,13 +13,13 @@ fs.ensureDirSync('./data/md');
 
 //toMarkdown();
 
-// load examples
+// load examples and store in json
 let examples = getFiles('./data/examples/**/*.txt');
-fs.writeJSONSync('./data/examples.json', examples, {spaces : 2});
+fs.writeJSONSync('./data/examples.json', examples, { spaces : 2 });
 
-// load tutorials
+// load tutorials and store in json
 let tuts = getFiles('./data/tutorials/**/*.txt');
-fs.writeJSONSync('./data/tutorials.json', tuts, {spaces : 2});
+fs.writeJSONSync('./data/tutorials.json', tuts, { spaces : 2 });
 
 // return a list of files in a json format
 // with key: filename and value: path

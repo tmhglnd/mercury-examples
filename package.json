@@ -1,6 +1,6 @@
 {
   "name": "mercury-examples",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Package with examples and tutorials for the Mercury language",
   "main": "./dist/mercury-examples.js",
   "scripts": {

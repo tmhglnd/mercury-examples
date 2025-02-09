@@ -1,12 +1,11 @@
 //
-// index.js
+// mercury-examples index.js
+// 
 // main entry for tutorials and examples of Mercury language
-// by Timo Hoogland (@tmhglnd), www.timohoogland.com
+// by Timo Hoogland (@tmhglnd), www.timohoogland.com, 2025
 // 
 
 const fs = require('fs');
-
-console.log('loaded Mercury Examples and Tutorials');
 
 // read the json files and export to examples and tutorials
 // converted to inline json in the distribution through brfs

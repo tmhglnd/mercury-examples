@@ -1,11 +1,11 @@
 // === TUTORIAL 520: Open Sound Control (OSC) ===
-// It is possible to send OSC Messages to Mercury instruments. 
-// However this is only possible when running Mercury via a localhost. 
-// Go to https://github.com/tmhglnd/mercury-playground#-install 
-// and follow the instructions to run mercury locally.
+// It is possible to send Open Sound Control (OSC) Messages to Mercury 
+// instruments. However this is only possible when running Mercury via a 
+// localhost. Go the website below and follow the instructions:
+// https://tmhglnd.github.io/mercury/docs/getting-started#-without-internet 
 
 // Now send osc-messages from other applications to 
-// ip: 127.0.0.1 (or localhost) at port: 8000
+// ip: 127.0.0.1 (or localhost) at port: 4880
 
 // for example control the note, length, volume and filter of a sawtooth synth
 // the osc-addresses are written as strings ''

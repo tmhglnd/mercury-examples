@@ -1,9 +1,13 @@
 // === TUTORIAL 211: Super Synth ===
-// The super synth is a synth that uses multiple
-// waveforms at the same time with a small detuning to 
-// create a more richer sound
+// The super synth is a synth that plays multiple
+// waveforms in unison at the same time with a slight detuning to 
+// create a more richer sound, sometimes also called fatsaw or supersaw
 
-new synth saw time(1/16) super(0.142 3) shape(1 80 1)
+new synth saw time(1/16) super(3 0.141) shape(1 1/8)
+
+// the detuning is in semitones (so 12 is detuned un octave) 
+// which can also be used to create overtones
+new synth sine time(2/1) note([0 -3] 3) shape(1/1 1/1) super(3 7.13)
 
 // Try different amounts of voices: 3, 5, 11
 // Try different detunings: 1.021, 7.245, 12.032

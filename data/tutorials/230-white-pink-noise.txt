@@ -1,0 +1,10 @@
+// === TUTORIAL 230: White & Pink Noise ===
+// The noise instrument allows you to create different
+// types of noise, as a starting point for your sound design
+// Below we have 2 basic noise generators, white and pink noise
+
+set tempo 105
+
+new noise white time(1/16) shape(1 100) play(euclid(16 11)) scope()
+
+new noise pink time(1/4) shape(1/4 1) scope()

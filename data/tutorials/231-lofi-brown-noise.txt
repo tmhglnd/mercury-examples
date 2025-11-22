@@ -1,0 +1,12 @@
+// === TUTORIAL 231: Brown & LoFi Noise ===
+// There are also other types of noise, such as Brown, LoFi, Crackle and Dust
+// Brownian noise is like a random walk, where every new noise signal value
+// is slightly diverging from the previous one.
+// LoFi noise sounds more like downsampled/8-bit types of noise.
+
+set tempo 105
+
+// both have a density() function, from 0-1
+new noise brownian time(1/16) density([0.2 0.6 0.4 0.7]) scope()
+
+new noise lofi time(1/4) shape(1/4 1) density(randomF(8)) scope()

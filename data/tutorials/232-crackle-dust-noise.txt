@@ -1,0 +1,10 @@
+// === TUTORIAL 232: Crackle & Dust ===
+// The Crackle and Dust noise give you two more flavours of noise.
+// Crackle sounds more like vinyl noise, Dust sounds more like random
+// clicks out the speakers. Both have the density function too.
+
+set tempo 105
+
+new noise crackle time(1/4) shape(off) density(spreadF(16 0 0.5)) pan(1) scope()
+
+new noise dust time(1/4) shape(1/4 1) density(0.2) pan(-1) scope()

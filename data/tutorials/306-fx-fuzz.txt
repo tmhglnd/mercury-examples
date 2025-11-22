@@ -1,0 +1,14 @@
+// === TUTORIAL 306: FX Fuzz ===
+// Add a fuzz distortion effect. This effect is modelled after the Big Muff Pi 
+// fuzz pedal by Electro Harmonix. The emulation uses three stages of 
+// distortion: soft-clipping, half-wave rectification and asymmetric 
+// hard-clipping.
+
+set tempo 115
+
+// the amount can go from 1 till Infinity
+list amounts [2 10 40 1000]
+new sample harp_down time(1/4) speed(0.25) fx(fuzz amounts) fx(filter low 8000 0)
+
+// Try changing the values in the function to hear what happens
+// It is also possible to modulate the parameters with lists

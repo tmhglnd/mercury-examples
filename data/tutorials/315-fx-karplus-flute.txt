@@ -1,0 +1,24 @@
+// === TUTORIAL 315: FX Karplus Flute ===
+// The effect can also be used to create a flute-like sound from
+// a noise input. This is done by setting the feedback to a negative
+// value like -0.9. The negative feedback results in a only odd harmonics
+// resonating. The sound also drops one octave. The effect is best audible
+// when the notes are quite high, so for that we add 36 and 48 to the notes
+// to increase the octaves 3 and 4 times.
+
+set tempo 90
+set scale minor a
+
+list bass add(repeat([0 [7 3 5]] 2) 36)
+// a short burst of pink noise through the karplus effect creates a dark bass-string 
+new noise pink time(2/1) shape(1/2 1/2) fx(karplus bass -0.95 0.6 1) 
+
+list lead add(shuffle(spread(16 12 0)) 48)
+list damps randomF(11 0.1 0.6)
+// a short burst of white noise through the effect creates a higher plucked-string
+new noise white time(3/2) shape(1/16 1/16) fx(karplus lead -0.95 0.2 1)
+
+set all fx(reverb 0.5 17) scope()
+
+// parameters:
+// fx(karplus note feedback damping drywet)

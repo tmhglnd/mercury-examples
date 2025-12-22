@@ -1,0 +1,25 @@
+// === TUTORIAL 313: FX Karplus ===
+// With the karplus effect you can give an instrument a "string-y" sound.
+// This is done with so called "Karplus-Strong String Synthesis", a technique
+// that emulates the physical properties of the plucking of a string.
+// If you send a sound through the model, like for example a short burst of
+// noise, it can give a resonating sound, that sounds similar to a metallic
+// string. You can choose the length with the feedback, and the damping adjusts
+// how bright or dull the string sounds. 
+
+set tempo 105
+set scale minor eb
+
+list bass repeat([0 [7 3 5]] 2)
+// a short burst of pink noise through the karplus effect creates a dark bass-string 
+new noise pink time(1/2) shape(10 20) fx(karplus bass 0.97 0.5) 
+
+list lead add(random(7 3 12) 12)
+list damps randomF(11 0.1 0.6)
+// a short burst of white noise through the effect creates a higher plucked-string
+new noise white time(1/6) shape(2 15) fx(karplus lead 0.9 damps)
+
+set all meter() 
+
+// parameters:
+// fx(karplus note feedback damping drywet)

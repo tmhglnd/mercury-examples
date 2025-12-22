@@ -1,0 +1,18 @@
+// === TUTORIAL 314: FX Karplus Amen ===
+// The effect can also be used to create melodic material from
+// for example samples like drumbeats (or anything else), that is
+// on it's own not melodic, but very percussive.
+// Here we use the amenbreak, with the karplus effect, to create a 
+// progression out of one instrument.
+
+set tempo 130
+set scale minor eb
+
+list notes sub(repeat([0 3 0 5 2] 4) [0 5])
+
+new loop amen time(1/1) fx(karplus notes 0.7 0.5 0.3)
+
+set all scope()
+
+// parameters:
+// fx(karplus note feedback damping drywet)

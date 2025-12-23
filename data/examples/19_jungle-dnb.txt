@@ -1,0 +1,27 @@
+// Drum'n'Bass
+// Creating some Drum'n'Bass with basic uptempo breakbeats and a 
+// bass synth with filter modulation and degradation. The synth is made of a
+// sawtooth wave. The whole time the same note is played, but the sound is
+// changed based on the degrade effect. The bass synth is triggered by the kick.
+
+set tempo 170
+set randomSeed 420
+set scale minor a
+
+// the kick plays a randomly generated clave pattern and is named kicky
+new sample kick_vintage time(1/8) play(clave(16 3 5)) name(kicky)
+// the snaredrum is made more punchy with some distortion, and sometimes waits an 8th note for some variation
+new sample snare_fat time(1/2 1/4) name(snare) speed(2.3) gain(1.5) fx(fuzz 30 0.2) wait([0 [0 0 1/8]])
+new sample hat_808 time(1/8) pan(random) gain(0.7) wait(10)
+// the amen break is used for some random slices, a hipass filter to remove the low frequencies
+new loop amen time(1/8) start(div([spread(8)] 8)) gain(2) shape(1 1/8) fx(filter high 150) 
+
+new synth saw name(syn) 
+    // a basic note with a long shape and some unison sound with detuning
+    set syn note(0 -1) super(3 0.11) shape(50 1/2 1/8) 
+    // the filter slowly ramps up whenever triggered by the kick, with every time a different degrade amount
+    set syn fx(triggerFilter low 1/2 1/1 100 2000 0.2) fx(degrade randomF(8 0.6 0.8))
+    // kicky is used to trigger the bass synth
+    set syn time(free '/kicky')  gain(1.2) 
+
+set all fx(reverb 0.1 1) meter()

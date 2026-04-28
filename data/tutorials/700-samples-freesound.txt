@@ -12,6 +12,6 @@ set samples s1 s2 s3
 // The sounds can be used with the name specified in the list
 // Loading the samples takes some time so better first load the sounds and 
 // then uncomment this code so you can use it and listen
-// new sample psykick time(1/4)
-// new sample snare_short time(1/16) play(euclid(7 3)) gain(0.5)
-// new sample hat_short time(1/4 1/8) gain(1.3)
+new sample psykick time(1/4)
+new sample snare_short time(1/16) play(euclid(7 3)) gain(0.5)
+new sample hat_short time(1/4 1/8) gain(1.3)

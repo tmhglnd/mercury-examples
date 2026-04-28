@@ -1,0 +1,16 @@
+// === TUTORIAL 703: Load All Default Samples ===
+// By default all the soundfiles are only loaded once you use
+// them in your code. This helps for the website to load fast,
+// allowing you to start coding immediately. But the downside is
+// that when you evaluate you won't hear the sound directly.
+// It can take a little time to load, which means it will miss the first 
+// hit.
+
+// To avoid this you can load all the default samples through the following
+// line of code:
+
+set samples default
+
+// When you evaluate this (which automatically happened when you clicked 
+// this tutorial), all the samples will be loaded (see the console prints below)
+// After the loading is done you can delete/comment the line.

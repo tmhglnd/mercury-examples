@@ -8,6 +8,6 @@ new sample kick_909 time(1/4)
 // try changing the values in the list
 // try adding/removing values as well
 list rhythm [1 0 0 1 0.1 0.5 0.2]
-new sample bamboo_g time(1/16) beat(rhythm)
+new sample block_lo time(1/16) beat(rhythm) speed(0.5)
 
 set all fx(reverb 0.4 3)

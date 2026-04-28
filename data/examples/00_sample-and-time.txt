@@ -1,11 +1,12 @@
-// play different samples
-// at different time intervals
-set tempo 95
+// Play different samples in a polyrhythmic way
+// by applying different time intervals
+set tempo 70
 
 new sample piano_a time(1)
-new sample piano_c time(1/2)
+new sample piano_c time(1/2 1/8) // this has a little offset
 new sample piano_f time(1/3)
 new sample piano_g time(1/4)
 
+// Play the samples at half speed (octave lower) and 
 // add reverb fx to all samples
-set all fx(reverb 0.4 3)
+set all speed(0.5) fx(reverb 0.4 11)

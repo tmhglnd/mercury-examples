@@ -1,13 +1,14 @@
-// multiple samples make up a beat
-// using a time offset as 
-// second argument
+// Multiple samples played together can make up a beat.
+// By using a time offset as second argument you can change
+// the moment they get played
 set tempo 131
 
-new sample kick_909 time(1/4)
-new sample snare_909 time(1/2 1/4)
-new sample hat_909 time(1/4 1/8)
+//                      time(interval offset)
+new sample kick_909     time(1/4)
+new sample snare_909    time(1/2 1/4)
+new sample hat_909      time(1/4 1/8)
 new sample hat_909_open time(1 15/16)
-new sample clap_909 time(5/16)
+new sample clap_909     time(5/16)
 
-// short slapback reverb
-set all fx(reverb 0.5 2)
+// A short slapback reverb
+set all fx(drive 3 0.3) fx(reverb 0.4 1)

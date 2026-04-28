@@ -7,5 +7,8 @@
 new sample kick_909
 // Try some other sounds like: hat_909, chimes, kalimba_e
 // You can find all the sounds by clicking the menu 'sounds'
+// Or clicking the menu 'prelisten'.
 // When you select a sound from the menu it is pasted on the 
-// location of the cursor in the editor
+// location of the cursor in the editor.
+// You can also add your own sounds. For that click 'add sounds' or
+// have a look in tutorials 700, 701 and 702

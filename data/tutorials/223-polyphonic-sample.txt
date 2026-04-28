@@ -12,5 +12,5 @@ print progression
 
 // With the sample it is important to have voice stealing 'on' when the shape is
 // turned off. Otherwise all the voices will stay busy because there is no "fade-out"
-new polySample bamboo_g name(polySamp)
+new polySample xylo_g4 name(polySamp)
     set polySamp note(progression 2) tune(67) time(1/16) shape(off) steal(on)

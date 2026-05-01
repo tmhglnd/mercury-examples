@@ -1,0 +1,13 @@
+// === TUTORIAL 241: FM Parameter Modulation ===
+// The arguments for the functions of the FM synth (ratio, index, fmShape) can 
+// be modulated with lists to create more complex sounds.
+//
+set tempo 100
+set scale minor_pentatonic
+
+list ratios choose(8 [0.5 2 3 4]) // choose 8 values from the ratio list
+list indexes random(7 1 6) // generate 7 numbers between 1 and 6
+new synth fm name(fmsyn)
+    set fmsyn time(1/8) note(0 1) ratio(ratios) index(indexes)
+    set fmsyn scope()
+    set fmsyn fx(reverb 0.3 7)

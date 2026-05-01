@@ -1,0 +1,15 @@
+// === TUTORIAL 242: FM Parameter Modulation ===
+// With the fmShape() you can specify an attack and release for the modulation 
+// depth of the modulator. This shape will gradually change them over time, 
+// resulting in a different amount of overtones that can be heard.
+
+set tempo 100
+set root eb
+
+list attacks [1 1/8 1/4]
+list releases [1/32 1/1 1/4 1/8]
+new synth fm name(fmsyn) time(1/4) note(0 0)
+    set fmsyn fmShape(attacks releases)
+    set fmsyn ratio(3) index(3) shape(off)
+    set fmsyn scope()
+    set fmsyn fx(reverb 0.3 7)

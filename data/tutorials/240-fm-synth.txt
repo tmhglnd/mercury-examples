@@ -1,0 +1,18 @@
+// === TUTORIAL 240: FM Synth ===
+// The FM Synth is a type of synth that allows you to apply Frequency 
+// Modulation to the source oscillator. With FM the source oscillator (usually 
+// called the "carrier") is a sinewave and its frequency is being modulated in 
+// realtime by another sinewave, this is called the "modulator".
+// 
+// The FM type adds extra functions to the synth:
+// ratio() (the ratio of the frequency between the carrier and modulator)
+// index() (the amount of modulation applied on the carrier by the modulator)
+// fmShape() (an envelope to change the index over time with attack and release)
+set tempo 100
+set scale minor_pentatonic
+
+list melody spread(5 24 0)
+new synth fm name(fmsyn)
+    set fmsyn time(1/8) note(melody 0) ratio(2) index(8)
+    set fmsyn scope() 
+	set fmsyn fx(reverb 0.3 7)

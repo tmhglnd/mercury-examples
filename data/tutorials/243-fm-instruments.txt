@@ -1,0 +1,23 @@
+// === TUTORIAL 243: FM Instruments ===
+// FM can be used to simulate many different instrument sounds. A very famous 
+// FM synthesizer was the Yamaha DX7, which contained a bunch of "algorithms" 
+// (different configurations of carrier/modulator) and different ratios, 
+// indexes and fm-shapes. Below are suggestions for a bass, xylophone and pluck 
+// sound combined into a short composition.
+
+set tempo 90
+set scale minor eb
+
+new synth fm note(0 -1) name(bass) shape(1 1/4)
+    set bass time(1/4) play(0.7) 
+    set bass index(5) ratio(2) fmShape(5 400)
+    
+new synth fm note(spread(7) [1 2]) name(xylo) shape(1 1/2)
+    set xylo time(1/8) play(0.5) ratio(78.3) fmShape(1 400) 
+    set xylo fx(reverb 0.5 17)
+    
+new synth fm name(pluck) note(drunk(8 3) 3)
+    set pluck time(1/4 1/8) fx(delay)
+    set pluck ratio(3) index(4) fmShape(0 30) shape(1 1/8)
+    
+set all scope()
